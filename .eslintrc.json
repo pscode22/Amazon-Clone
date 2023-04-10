@@ -17,5 +17,26 @@
     "sourceType": "module"
   },
   "plugins": ["react", "@typescript-eslint"],
-  "rules": {}
+  "rules": {},
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true,
+        "project": "./tsconfig.json",
+        "alias": {
+          "map": [
+            ["@components", "./src/components"],
+            // ["@pages", "./src/components/pages"],
+            // ["@data", "./src/data"],
+            ["@assets", "./src/assets"],
+            // ["@ctx", "./src/contexts"],
+            ["@", "./src"]
+          ]
+        }
+      }
+    }
+  }
 }
