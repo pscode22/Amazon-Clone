@@ -13,11 +13,30 @@
   "overrides": [],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint"],
-  "rules": {},
+  "plugins": ["react", "@typescript-eslint", "react-hooks", "import"],
+  "rules": {
+    "import/no-unresolved": "error",
+    // "max-len": ["warn", { "code": 100 }],
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "no-underscore-dangle": [1, { "allow": ["_id"] }],
+    "react/require-default-props": "off"
+  },
   "settings": {
     "import/parsers": {
       "@typescript-eslint/parser": [".ts", ".tsx"]
