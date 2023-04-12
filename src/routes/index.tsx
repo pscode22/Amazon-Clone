@@ -1,8 +1,8 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom";
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 
-const RouteLayout = React.lazy(() => import("./layout"));
-const RouteHomePage = React.lazy(() => import("./home"));
+const RouteLayout = React.lazy(() => import('./layout'));
+const RouteHomePage = React.lazy(() => import('./home'));
 
 export default function AppRoutes() {
   return (

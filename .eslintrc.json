@@ -21,17 +21,23 @@
   },
   "plugins": ["react", "@typescript-eslint", "react-hooks", "import"],
   "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true
+      }
+    ],
     "import/no-unresolved": "error",
-    //  "max-len": ["warn", { "code": 100 }],
+    "max-len": ["warn", { "code": 110 }],
     "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": ["error"],
     "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
-    // "no-shadow": "off",
+    "no-shadow": "off",
     "react/react-in-jsx-scope": "off",
-    // "@typescript-eslint/no-shadow": ["error"],
+    "@typescript-eslint/no-shadow": ["error"],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    // "import/prefer-default-export": "off",
+    "import/prefer-default-export": "off",
     "react/prop-types": "off",
     "import/extensions": [
       "error",
@@ -42,7 +48,9 @@
       }
     ],
     "no-underscore-dangle": [1, { "allow": ["_id"] }],
-    "react/require-default-props": "off"
+    "react/require-default-props": "off",
+    "no-multi-spaces":["error"],
+    "spaced-comment":["warn", "always", { "exceptions": ["-", "+"] }]
   },
   "settings": {
     "import/parsers": {
