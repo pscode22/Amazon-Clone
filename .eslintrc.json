@@ -9,7 +9,6 @@
     "plugin:@typescript-eslint/recommended",
     "airbnb",
     "plugin:prettier/recommended"
-    // "prettier"
   ],
   "overrides": [],
   "parser": "@typescript-eslint/parser",
@@ -20,7 +19,13 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint", "react-hooks", "import"],
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "react-hooks",
+    "import",
+    "prettier"
+  ],
   "rules": {
     "prettier/prettier": [
       "error",
@@ -50,8 +55,9 @@
     ],
     "no-underscore-dangle": [1, { "allow": ["_id"] }],
     "react/require-default-props": "off",
-    "no-multi-spaces":["error"],
-    "spaced-comment":["warn", "always", { "exceptions": ["-", "+"] }]
+    "no-multi-spaces": ["error"],
+    "line-comment-position": "warn",
+    "spaced-comment": "error"
   },
   "settings": {
     "import/parsers": {
