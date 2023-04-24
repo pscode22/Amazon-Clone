@@ -1,10 +1,14 @@
+import MainHeader from '@components/layout/header';
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 
 export default function DefaultLayout() {
   return (
-    <div>
-      <Outlet />
+    <div className="w-screen">
+      <MainHeader />
+      <div>
+        <Outlet />
+      </div>
     </div>
   );
 }
