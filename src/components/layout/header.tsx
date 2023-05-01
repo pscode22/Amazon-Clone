@@ -1,6 +1,7 @@
 import React from 'react';
 import amazonLogo from '@assets/svg/amazon.svg';
 import locationLogo from '@assets/svg/location.svg';
+import searchLogo from '@assets/svg/search.svg';
 
 export default function MainHeader() {
   return (
@@ -21,6 +22,24 @@ export default function MainHeader() {
             <p className="text-sm font-bold">Select your address</p>
           </div>
         </div>
+      </div>
+
+      <div className="h-[4rem] my-auto flex">
+        <input
+          type="text"
+          className="h-full bg-white text-black text-base w-[76rem]"
+        />
+        <button
+          className="h-full bg-secondaryYellow"
+          style={{ borderRadius: '0 .4rem .4rem 0' }}
+          type="button"
+        >
+          <img
+            src={searchLogo}
+            alt="headerSearch"
+            className="my-[.8rem] mx-[1rem]"
+          />
+        </button>
       </div>
     </div>
   );

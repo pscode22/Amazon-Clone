@@ -7,6 +7,7 @@ export default function TailwindBaseColors() {
     alert: '#ffaf38',
     danger: '#cc1d3a',
     yellow: '#FFD814',
+    secondaryYellow: '#F4BF76',
     vividOrange: '#FFA41C',
 
     ...{
