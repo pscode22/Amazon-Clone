@@ -1,20 +1,27 @@
 import React from 'react';
-import amazonLogo from '@assets/png/amazon-logo.png';
+import amazonLogo from '@assets/svg/amazon.svg';
+import locationLogo from '@assets/svg/location.svg';
 
 export default function MainHeader() {
   return (
-    <div className="w-full bg-[#131921] h-[6rem] px-2  gap-1">
-      <div className="w-[12rem] h-full">
-        <div className="h-full flex align-middle justify-center py-2">
-          <img
-            src={amazonLogo}
-            alt="amazon-logo"
-            className="border border-transparent cursor-pointer hover:border-white p-2"
-          />
+    <div className="w-full bg-[#131921] h-[6rem] px-2 flex gap-1">
+      <div className="w-[12rem] h-min my-auto">
+        <div className="border border-transparent hover:border-white hover:cursor-pointer">
+          <img src={amazonLogo} alt="amazon-logo" className="m-2" />
         </div>
       </div>
 
-      <div className="my-[.5rem] border border-white">ded</div>
+      <div className="my-auto border border-transparent hover:border-white hover:cursor-pointer">
+        <div className="flex gap-1 m-1">
+          <div className="m-auto">
+            <img src={locationLogo} alt="locationLogo" />
+          </div>
+          <div className="me-1">
+            <p className="text-xs">Hello</p>
+            <p className="text-sm font-bold">Select your address</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
